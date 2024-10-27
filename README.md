@@ -90,11 +90,14 @@ Install the GL-iNET building SDK and pick your target (set TARGET,VERSION - mine
 
 ### Tweak the package to your needs
 
-The Makefile supports VARIANTS: you define the list of VARIANT builds to create along with which BUILD TAGS it should build with.
+The Makefile supports VARIANTS: you define the list of VARIANT builds to create along with which BUILD TAGS it should be built with.
 \
 See the provided Makefile for an example (the "fake" variant is there just to show how to create more than 1 variant)
 \
-Refer to the [Custom Builder documentation](https://github.com/influxdata/telegraf/blob/master/docs/CUSTOMIZATION.md#via-go-build) for how to get the correct minimum build tags from an existing config file.
+\
+Refer to the [Telegraf's Custom Builder documentation](https://github.com/influxdata/telegraf/tree/master/tools/custom_builder) for how to get the correct minimum build tags from an existing config file.
+\
+(You can use the `--dry-run` argument to just create the tags.)
 
 ### Update Feeds
 
