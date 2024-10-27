@@ -1,0 +1,28 @@
+[global_tags]
+[agent]
+  interval = "10s"
+  round_interval = true
+  metric_batch_size = 1000
+  metric_buffer_limit = 10000
+  collection_jitter = "0s"
+  flush_interval = "10s"
+  flush_jitter = "0s"
+  precision = "0s"
+  hostname=""
+  omit_hostname = false
+
+[[outputs.influxdb]]
+  urls = ["https://influx-prod-xx-prod-eu-west-x.grafana.net/api/v1/push/influx"]
+  skip_database_creation = true
+  username = "1234567"
+  password = "glc____api_key"
+
+[[inputs.socket_listener]]
+  service_address = "udp://:25826"
+  data_format = "collectd"
+  collectd_typesdb = ["/usr/share/collectd/types.db"]
+  collectd_parse_multivalue = "split"
+
+
+[inputs.socket_listener.tags]
+  bucket = "collectd"
