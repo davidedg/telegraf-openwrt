@@ -1,3 +1,8 @@
+# Required BUILD TAGS: custom,inputs.socket_listener,outputs.influxdb,parsers.collectd
+# This config file supports:
+# receiving CollectD metrics on a Unix socket
+# sending them to InfluxDB via HTTP (used by Grafana Cloud)
+
 [global_tags]
 [agent]
   interval = "10s"
