@@ -3,10 +3,10 @@ This repo contains a Makefile for building [Telegraf](https://github.com/influxd
 ) for [OpenWRT](https://openwrt.org/).
 \
 \
-The rationale for this project is that we can tweak the build down to the exact dependencies we want, using [build-tags](https://github.com/influxdata/telegraf/blob/master/docs/CUSTOMIZATION.md#via-go-build).
+The rationale for this project is the ability to tweak the build to the dependencies we want, using [build-tags](https://github.com/influxdata/telegraf/blob/master/docs/CUSTOMIZATION.md#via-go-build).
 \
 \
-This allows to greatly reduce the on-disk and ram footprint of the produced binary, further improved with a round of UPX.
+This allows for a huge reduction in the on-disk and ram footprint of the produced binary.
 \
 The resulting binary is ~3.5MB (as opposed to ~19MB un-compressed or ~48MB for the GL-iNET version and ~250MB for a standard build).
 
