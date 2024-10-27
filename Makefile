@@ -120,13 +120,13 @@ endef
 
 VARIANTS := \
 	collectdsock2influxgrcloud \
-	nano
+	fake
 
 ifeq ($(BUILD_VARIANT),collectdsock2influxgrcloud)
 GO_BUILD_TAGS:=custom,inputs.socket_listener,outputs.influxdb,parsers.collectd
 endif
 
-ifeq ($(BUILD_VARIANT),nano)
+ifeq ($(BUILD_VARIANT),fake)
 GO_BUILD_TAGS:=custom,inputs.socket_listener
 endif
 
