@@ -113,3 +113,9 @@ Refer to the [Telegraf's Custom Builder documentation](https://github.com/influx
 Transfer the built packages (found under ~/sdk/sdk/$VERSION/$TARGET/bin/packages/) to the target device and install with
 
     $ opkg install <package_name>.ipk
+
+### Binary Releases
+
+You can check if a binary is already present here https://github.com/davidedg/telegraf-openwrt-builds
+\
+You can also request a new build there (via Issues request)
