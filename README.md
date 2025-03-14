@@ -16,7 +16,7 @@ Tested instructions for setting up a build environment are provided, based on th
 I am assuming the building user has sudo privileges, adjust to your environment.
 
 ### Install Building OS
-Linux Ubuntu amd64 24.04 LTS standard server, fully upgraded to Oct.2024
+Linux Ubuntu amd64 24.04 LTS standard server, fully upgraded to 14.Mar.2025
 
 ### Install build dependencies
 Install these packages:
@@ -38,10 +38,10 @@ All in one go:
 
 ### Install GO compiler
 
-I tested with version 1.23.2
+I tested with version 1.24.1
 
-	wget https://go.dev/dl/go1.23.2.linux-amd64.tar.gz
-	rm -rf $HOME/golang/go && mkdir $HOME/golang && tar -C $HOME/golang -xzf go1.23.2.linux-amd64.tar.gz
+	wget https://go.dev/dl/go1.24.1.linux-amd64.tar.gz
+	rm -rf $HOME/golang/go && mkdir $HOME/golang && tar -C $HOME/golang -xzf go1.24.1.linux-amd64.tar.gz
 	cat $HOME/.profile | grep -v ^# | grep PATH | grep '$HOME/golang/go/bin' || cat <<EOF >> $HOME/.profile
 
 	# GO
